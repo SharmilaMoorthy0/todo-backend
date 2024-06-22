@@ -1,0 +1,17 @@
+const express=require('express')
+const { signUp, allUser, getsingleUser, getoneUser ,DeleteUser, editUser, UpdateallUser, login, forgotpassword, verifyOtp, resetPassword} = require('../Controller/user.controller')
+const auth = require('../middleware/auth')
+
+const router=express.Router()
+router.post('/user/signup',signUp)
+router.get('/all/user',auth,allUser)
+router.get('/user/:id',auth,getsingleUser)
+router.post('/get/user',auth,getoneUser)
+router.delete('/remove/user/:id',auth,DeleteUser)
+router.put('/update/user/:id',auth,editUser)
+router.post('/update/all/user',auth,UpdateallUser)
+router.post('/login/user',login)
+router.post('/forgot/password',forgotpassword)
+router.post('/verify/otp',verifyOtp)
+router.post('/reset/password',resetPassword)
+module.exports=router
