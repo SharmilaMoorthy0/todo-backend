@@ -1,5 +1,5 @@
 const express=require('express')
-const { signUp, allUser, getsingleUser, getoneUser ,DeleteUser, editUser, UpdateallUser, login, forgotpassword, verifyOtp, resetPassword} = require('../Controller/user.controller')
+const { allUser, getsingleUser, getoneUser ,DeleteUser, editUser, UpdateallUser, login, forgotpassword, verifyOtp, resetPassword, signUp} = require('../controller/user.controller')
 const auth = require('../middleware/auth')
 
 const router=express.Router()
